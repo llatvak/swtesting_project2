@@ -3,11 +3,11 @@ import divide from "../divide";
 describe("Testing divide", () => {
 
     it("Should divide two integers properly", () => {
-        expect(divide(6, 4)).toBe(1.5);
-        expect(divide(5, 2)).toBe(2.5);
-        expect(divide(-6, 4)).toBe(-1.5);
-        expect(divide(-6, -4)).toBe(1.5);
-        expect(divide(6, -4)).toBe(-1.5);
+        expect(divide(6, 4)).toBeCloseTo(1.5);
+        expect(divide(5, 2)).toBeCloseTo(2.5);
+        expect(divide(-6, 4)).toBeCloseTo(-1.5);
+        expect(divide(-6, -4)).toBeCloseTo(1.5);
+        expect(divide(6, -4)).toBeCloseTo(-1.5);
     });
 
     it("Should handle NaN correctly", () => {

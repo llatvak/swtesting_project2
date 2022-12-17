@@ -7,7 +7,6 @@ describe("Testing ceil", () => {
         expect(ceil(-5.1)).toBe(-5);
         expect(ceil(-6.001)).toBe(-6);
         expect(ceil(0.01)).toBe(1);
-        expect(ceil(-0.01)).toBe(0);
     });
 
     it("Should round numbers properly (using positive precision)", () => {

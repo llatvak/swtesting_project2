@@ -6,11 +6,12 @@ describe("Testing toString", () => {
         expect(toString('')).toBe('');
         expect(toString([1, 2, 3])).toBe('1,2,3');
         expect(toString(NaN)).toBe('NaN');
+        expect(toString([null, null, null])).toBe(",,,")
         expect(toString(null)).toBe('');
     });
     it("Should handle objects correctly", () => {
-        expect(toString({a: 1})).toBe('[object Object]');
         expect(toString([1, 2, [9, 10]])).toBe('1,2,9,10');
         expect(toString([Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY])).toBe('-Infinity,Infinity');
+        expect(toString({a: 1})).toBe('[object Object]');
     });
 });

@@ -14,6 +14,11 @@ describe("Testing eq", () => {
         expect(eq(0, 0)).toBe(true);
         expect(eq([1, 1, 1], [1, 1, 1])).toBe(true);
         expect(eq({a : "b"}, {a : "b"})).toBe(true);
+
+        expect(eq(0, -0)).toBe(true);
+        expect(eq(0, NaN)).toBe(true);
+        expect(eq(-0, NaN)).toBe(true);
+        expect(eq(NaN, NaN)).toBe(true);
     });
     it("Should return right value for objects", () => {
         const object = {'a' : 1};
