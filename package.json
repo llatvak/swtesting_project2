@@ -11,12 +11,12 @@
   "jest": {
     "modulePaths": [
       "./src"
+    ],
+    "collectCoverageFrom": [
+      "src/*.js",
+      "!**/.internal/**"
     ]
   },
-  "collectCoverageFrom": [
-    "src/*.js",
-    "!**/.internal/**"
-  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
