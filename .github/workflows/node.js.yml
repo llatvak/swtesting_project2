@@ -23,20 +23,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm test -- --coverage
-        if: ${{ always() }}
       - name: Coveralls
+        if: ${{ always() }}
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          parallel: true
-  coveralls:
-    name: Coveralls
-    needs: build
-    if: ${{ always() }}
-    runs-on: ubuntu-latest
-    steps:
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        parallel-finished: true
