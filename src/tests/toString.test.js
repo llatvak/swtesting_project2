@@ -6,7 +6,7 @@ describe("Testing toString", () => {
         expect(toString('')).toBe('');
         expect(toString([1, 2, 3])).toBe('1,2,3');
         expect(toString(NaN)).toBe('NaN');
-        expect(toString([null, null, null])).toBe(",,,")
+        expect(toString([null, null, null])).toBe(",,")
         expect(toString(null)).toBe('');
     });
     it("Should handle objects correctly", () => {

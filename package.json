@@ -13,6 +13,10 @@
       "./src"
     ]
   },
+  "collectCoverageFrom": [
+    "src/*.js",
+    "!**/.internal/**"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
