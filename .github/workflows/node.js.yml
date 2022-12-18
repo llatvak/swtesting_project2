@@ -23,7 +23,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm test -- --coverage
-        if: always()
+        continue-on-error: true
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
